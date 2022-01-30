@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>win</title>
+    <link rel="stylesheet" href="../../css/atlas.css">
+<link rel="stylesheet" href="../../css/martin-magni.css">
+<link rel="stylesheet" href="../../css/fancade.css">
+<link rel="stylesheet" href="../../css/script.css">
+</head>
+
+<body>
+
+<style>
+.script1 .scrf ,.script1 .scrb ,.script1 .scrl ,.script1 .scrr ,.script1 .scrt ,.script1 .scrd{
+    background-image:url(../../scripts/1/b.png);
+    image-rendering: pixelated;
+    }
+.script2 .scrf ,.script2 .scrb ,.script2 .scrl ,.script2 .scrr ,.script2 .scrt ,.script2 .scrd{
+    background-image:url(../../scripts/2/b.png);
+    image-rendering: pixelated;
+}
+.script3 .scrf ,.script3 .scrb ,.script3 .scrl ,.script3 .scrr ,.script3 .scrt ,.script3 .scrd{
+   background-image:url(../../scripts/3/b.png);
+   image-rendering: pixelated;
+}
+.script4 .scrf ,.script4 .scrb ,.script4 .scrl ,.script4 .scrr ,.script4 .scrt ,.script4 .scrd{
+   background-image:url(../../scripts/4/b.png);
+   image-rendering: pixelated;
+}
+</style>
+
+    <div class="script-div">
+            <div class="script2 camera">
+               <div class="scrf"></div>
+               <div class="scrb"></div>
+               <div class="scrt"><img src="./img/loop.png" class="script-icon">
+               </div>
+               <div class="scrd">
+                  <div class="box-shadow"></div>
+               </div>
+               <div class="scrl"></div>
+               <div class="scrr"></div>
+            </div>
+         </div>
+         <h1>Loop</h1>
+          <div class="div-line-small"></div>
+         <div class="center info" style="width: 90vw; height: 40vh;">
+           
+            <div class="left">
+            The Loop block is used to run a script multiple times in the same frame. Often used for processing every element in a List.
+</div>
+<div>
+<div class="div-line-small"></div>
+<h3 class="left">Inputs</h3>
+<div class="left">
+- Start: The Loop block starts looping from the Start input.
+</div>
+<div class="left">
+- Stop: Then it stops looping once it reaches the Stop input.
+</div>
+<div class="div-line-small"></div>
+<div class="left">
+<h3>Outputs</h3>
+- Do: Plug this to the script that you want to run for every loop.
+</div>
+<div class="left">
+- Counter: Outputs the current loop number counting from the Start value. If the Start value is greater than the Stop value, it counts down instead of up.
+</div>
+<div class="div-line-small"></div>
+<h2 class="left">Note</h2>
+<div class="div-line-small"></div>
+<div class="left">
+- The counter always steps by 1 (or -1, if Start is greater than Stop)
+</div>
+<div class="left">
+- The counter does not output the Stop value
+</div>
+<div class="left">
+- If a non-integer value is provided for Start, it's rounded down to the next smallest integer.
+</div>
+<div class="left">
+- If a non-integer value is provided for Stop, it's rounded up to the next biggest integer.
+</div>
+<div class="left">
+If you were to start the loop at 0 and stop it at 5, you would loop the script 5 times (Count) and the Counter outputs from 0 to 4 (End). Which shows that the Counter won't output the Stop value by the end of the loop, might want to keep that in mind.
+</div>
+<div class="div-line-small"></div>
+            </div>
+         </div>
+         
+         <a onclick="button()" href="../control.html" class="button-exit">
+            <img src="../../img/button.png" class="exit"></a>
+
+<script src="../../js/script.js"></script>
+<script>
+   function button() {
+   var audio = new Audio('../../button.wav');
+   audio.play();
+   }
+</script>
+
+</body>
+
+</html>

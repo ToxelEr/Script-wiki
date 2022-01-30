@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>game</title>
+    <link rel="stylesheet" href="../../css/atlas.css">
+<link rel="stylesheet" href="../../css/martin-magni.css">
+<link rel="stylesheet" href="../../css/fancade.css">
+<link rel="stylesheet" href="../../css/script.css">
+</head>
+
+<body>
+
+<style>
+.script1 .scrf ,.script1 .scrb ,.script1 .scrl ,.script1 .scrr ,.script1 .scrt ,.script1 .scrd{
+    background-image:url(../../scripts/1/c.png);
+    image-rendering: pixelated;
+    }
+.script2 .scrf ,.script2 .scrb ,.script2 .scrl ,.script2 .scrr ,.script2 .scrt ,.script2 .scrd{
+    background-image:url(../../scripts/2/c.png);
+    image-rendering: pixelated;
+}
+.script3 .scrf ,.script3 .scrb ,.script3 .scrl ,.script3 .scrr ,.script3 .scrt ,.script3 .scrd{
+   background-image:url(../../scripts/3/c.png);
+   image-rendering: pixelated;
+}
+.script4 .scrf ,.script4 .scrb ,.script4 .scrl ,.script4 .scrr ,.script4 .scrt ,.script4 .scrd{
+   background-image:url(../../scripts/4/c.png);
+   image-rendering: pixelated;
+}
+</style>
+
+    <div class="script-div">
+            <div class="script4 camera">
+               <div class="scrf"></div>
+               <div class="scrb"></div>
+               <div class="scrt"><img src="./img/raycast.png" class="script-icon">
+               </div>
+               <div class="scrd">
+                  <div class="box-shadow"></div>
+               </div>
+               <div class="scrl"></div>
+               <div class="scrr"></div>
+            </div>
+         </div>
+         <h1>Raycast</h1>
+         <div class="div-line-small"></div>
+         <div class="center info" style="width: 90vw; height: 40vh;">
+            <div class="left">
+            Traces a line between two points and outputs <red>True</red> if the line hits anything, the position of intersection, and the object it hit. (Think of it as a laser, you stand in the starting position and shoot a laser to the end position.)
+            </div>
+<div class="div-line-small"></div>
+<div class="left">
+Note that Raycast detects when the line hits the outside surface of a block. If the line starts <red>inside</red> the block then it will not hit that block when going out. Also, it won't  detect an object that has been created in the same frame, you have to wait 1 frame after creating the object for Raycast to detect it.
+</div>
+   <div class="div-line-small"></div>
+<div class="left">
+It cannot detect Pass Through and Script Blocks.
+</div>
+   <div class="div-line-small"></div>
+<h2>Raycast Drawing</h2>
+   <div class="div-line-small"></div>
+   <div class="left">
+In edit mode, a visible line will be drawn between the start and end points: green if there is not a hit, red otherwise. This effect can be used to make red and green line drawings, but it won't be visible in play mode unless the level contains only scripting blocks and no normal blocks.
+</div>
+   <div class="div-line-small"></div>
+<div class="left">
+Because red lines require the presence of a non-scripting block, you must use a loophole to get them to appear in play mode. If a normal block is <red>inside</red> a scripting block at the start of the level, it will not trigger the hiding of script blocks and Raycast lines. On the first frame the normal block can then be moved to the floor, and set to visible (being inside a scripting block makes it start not visible). Then set it in the path of a Raycast line to turn it red.
+</div>
+<div class="div-line-small"></div>
+         </div>
+         
+         <a onclick="button()" href="../objects.html" class="button-exit">
+            <img src="../../img/button.png" class="exit"></a>
+
+<script src="../../js/script.js"></script>
+<script>
+   function button() {
+   var audio = new Audio('../../button.wav');
+   audio.play();
+   }
+</script>
+
+</body>
+
+</html>

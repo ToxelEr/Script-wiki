@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>game</title>
+    <link rel="stylesheet" href="../../css/atlas.css">
+<link rel="stylesheet" href="../../css/martin-magni.css">
+<link rel="stylesheet" href="../../css/fancade.css">
+<link rel="stylesheet" href="../../css/script.css">
+</head>
+
+<body>
+
+<style>
+.script1 .scrf ,.script1 .scrb ,.script1 .scrl ,.script1 .scrr ,.script1 .scrt ,.script1 .scrd{
+    background-image:url(../../scripts/1/a.png);
+    image-rendering: pixelated;
+    }
+.script2 .scrf ,.script2 .scrb ,.script2 .scrl ,.script2 .scrr ,.script2 .scrt ,.script2 .scrd{
+    background-image:url(../../scripts/2/a.png);
+    image-rendering: pixelated;
+}
+.script3 .scrf ,.script3 .scrb ,.script3 .scrl ,.script3 .scrr ,.script3 .scrt ,.script3 .scrd{
+   background-image:url(../../scripts/3/a.png);
+   image-rendering: pixelated;
+}
+.script4 .scrf ,.script4 .scrb ,.script4 .scrl ,.script4 .scrr ,.script4 .scrt ,.script4 .scrd{
+   background-image:url(../../scripts/4/a.png);
+   image-rendering: pixelated;
+}
+</style>
+
+    <div class="script-div">
+            <div class="script4 camera">
+               <div class="scrf"></div>
+               <div class="scrb"></div>
+               <div class="scrt"><img src="./img/camera.png" class="script-icon">
+               </div>
+               <div class="scrd">
+                  <div class="box-shadow"></div>
+               </div>
+               <div class="scrl"></div>
+               <div class="scrr"></div>
+            </div>
+         </div>
+         <h1>Set Camera</h1>
+         <div class="center info" style="width: 90vw; height: 40vh;">
+            <div class="div-line-small"></div>
+            Sets the position, rotation (angle) and distance (zoom) of the camera.
+            <div class="div-line-small"></div>
+            <h2>Inputs</h2>
+            <div class="center">
+       <div class="div-line-small"></div>
+               <h3 class="left">Position: </h3><div class="left">The coordinate of the camera's focus (defaults to the center of the world)</div>
+ <div class="div-line-small"></div>
+ <h3 class="left">Rotation:</h3><div class="left"> The camera angle (defaults to a true isometric view of 35.264,45,0)
+ </div>
+ <div class="div-line-small"></div>
+ <h3 class="left">Distance:</h3><div class="left"> The distance between the camera and the focus point (or actually it's zoom in orthographic perspective)</div>
+ <div class="div-line-small"></div>
+            </div>
+         </div>
+         <a onclick="button()" href="../game.html" class="button-exit">
+            <img src="../../img/button.png" class="exit"></a>
+
+<script src="../../js/script.js"></script>
+<script>
+   function button() {
+      var audio = new Audio('../../button.wav');
+      audio.play();
+   }
+</script>
+
+</body>
+
+</html>

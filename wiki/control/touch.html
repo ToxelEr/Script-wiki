@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>win</title>
+    <link rel="stylesheet" href="../../css/atlas.css">
+<link rel="stylesheet" href="../../css/martin-magni.css">
+<link rel="stylesheet" href="../../css/fancade.css">
+<link rel="stylesheet" href="../../css/script.css">
+</head>
+
+<body>
+
+<style>
+.script1 .scrf ,.script1 .scrb ,.script1 .scrl ,.script1 .scrr ,.script1 .scrt ,.script1 .scrd{
+    background-image:url(../../scripts/1/b.png);
+    image-rendering: pixelated;
+    }
+.script2 .scrf ,.script2 .scrb ,.script2 .scrl ,.script2 .scrr ,.script2 .scrt ,.script2 .scrd{
+    background-image:url(../../scripts/2/b.png);
+    image-rendering: pixelated;
+}
+.script3 .scrf ,.script3 .scrb ,.script3 .scrl ,.script3 .scrr ,.script3 .scrt ,.script3 .scrd{
+   background-image:url(../../scripts/3/b.png);
+   image-rendering: pixelated;
+}
+.script4 .scrf ,.script4 .scrb ,.script4 .scrl ,.script4 .scrr ,.script4 .scrt ,.script4 .scrd{
+   background-image:url(../../scripts/4/b.png);
+   image-rendering: pixelated;
+}
+</style>
+
+    <div class="script-div">
+            <div class="script4 camera">
+               <div class="scrf"></div>
+               <div class="scrb"></div>
+               <div class="scrt"><img src="./img/touch.png" class="script-icon">
+               </div>
+               <div class="scrd">
+                  <div class="box-shadow"></div>
+               </div>
+               <div class="scrl"></div>
+               <div class="scrr"></div>
+            </div>
+         </div>
+         <h2>Touch Sensor</h2>
+                    <div class="div-line-small"></div>
+         <div class="center info" style="width: 90vw; height: 40vh;">
+ 
+            <div class="left">
+Executes the output when user touches the screen. It'll also output the screen coordinates of that tap. And there's a setting to toggle whether to trigger throughout the touch, or only at the start or end of it.
+</div>
+<div class="div-line-small"></div>
+<div class="left">
+They can be changed by selecting the touch sensor and tapping the buttons that appear in the bottom right corner.
+</div>
+<div class="div-line-small"></div>
+<div class="left">
+The first button has three options:
+</div>
+<div class="left">
+ - Touching: The touch sensor will trigger every frame when your finger is touching the screen
+ - Begins: The touch sensor will trigger once when you begin touching
+ - Ends: The touch sensor will trigger once when you stop touching
+</div>
+<div class="div-line-small"></div>
+<div class="left">
+The second button changes how many fingers have to be touching the screen to trigger the touch sensor.
+
+            </div>
+     <div class="div-line-small"></div>
+         </div>
+         
+         <a onclick="button()" href="../control.html" class="button-exit">
+            <img src="../../img/button.png" class="exit"></a>
+
+<script src="../../js/script.js"></script>
+<script>
+   function button() {
+   var audio = new Audio('../../button.wav');
+   audio.play();
+   }
+</script>
+
+</body>
+
+</html>

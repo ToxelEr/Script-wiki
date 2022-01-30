@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>game</title>
+    <link rel="stylesheet" href="../../css/atlas.css">
+<link rel="stylesheet" href="../../css/martin-magni.css">
+<link rel="stylesheet" href="../../css/fancade.css">
+<link rel="stylesheet" href="../../css/script.css">
+</head>
+
+<body>
+
+<style>
+.script1 .scrf ,.script1 .scrb ,.script1 .scrl ,.script1 .scrr ,.script1 .scrt ,.script1 .scrd{
+    background-image:url(../../scripts/1/a.png);
+    image-rendering: pixelated;
+    }
+.script2 .scrf ,.script2 .scrb ,.script2 .scrl ,.script2 .scrr ,.script2 .scrt ,.script2 .scrd{
+    background-image:url(../../scripts/2/a.png);
+    image-rendering: pixelated;
+}
+.script3 .scrf ,.script3 .scrb ,.script3 .scrl ,.script3 .scrr ,.script3 .scrt ,.script3 .scrd{
+   background-image:url(../../scripts/3/a.png);
+   image-rendering: pixelated;
+}
+.script4 .scrf ,.script4 .scrb ,.script4 .scrl ,.script4 .scrr ,.script4 .scrt ,.script4 .scrd{
+   background-image:url(../../scripts/4/a.png);
+   image-rendering: pixelated;
+}
+</style>
+
+    <div class="script-div">
+            <div class="script2 camera">
+               <div class="scrf"></div>
+               <div class="scrb"></div>
+               <div class="scrt"><img src="./img/menuitem.png" class="script-icon">
+               </div>
+               <div class="scrd">
+                  <div class="box-shadow"></div>
+               </div>
+               <div class="scrl"></div>
+               <div class="scrr"></div>
+            </div>
+         </div>
+         <h1>Menu Item</h1>
+          <div class="div-line-small"></div>
+         <div class="center info" style="width: 90vw; height: 40vh;">
+            <div class="left">
+            The Menu Item block is a script block which was added on Fancade 1.6. When it is  executed at least once it activates the shop system adding a shop to the game which is only accessible when you win or lose the game. The main use of this script is to add items to a shop which should only be done once per item.
+            </div>
+            <div class="div-line-small"></div>
+            <h2>Notes</h2>
+            <div class="div-line-small"></div>
+            <div class="left">
+               Though this new script made a great new mechanic for Fancade it has some limitations:
+                The base prices are currently only fixed to 10, 100, 1k & 10k.
+               Each menu item script must only be executed once per game, if it's left continuously executing the shop will be filled with repeating set of items until it has too many items in it, which will cause the <red style="color: #fe4a67;">Too many menu items!</red> error to appear.
+            </div>
+            <div class="div-line-small"></div>
+         </div>
+         <a onclick="button()" href="../game.html" class="button-exit">
+            <img src="../../img/button.png" class="exit"></a>
+
+<script src="../../js/script.js"></script>
+<script>
+   function button() {
+      var audio = new Audio('../../button.wav');
+      audio.play();
+   }
+</script>
+
+</body>
+
+</html>
