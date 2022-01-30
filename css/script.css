@@ -1,0 +1,501 @@
+body {
+   user-select: none;
+}
+
+.script1 .script-icon {
+   transform: rotateZ(-90deg);
+   width: 56px;
+}
+.script2 .script-icon {
+   width: 120px;
+   transform: rotateZ(-90deg);
+}
+.script3 .script-icon {
+   width: 56px;
+   transform: rotateZ(-90deg);
+}
+.script4 .script-icon {
+   width: 120px;
+   transform: rotateZ(-90deg);
+}
+
+@keyframes scrip {
+   0% {
+      transform: rotateX(-45deg) rotateY(-35deg);
+   }
+   50% {
+      transform: rotateX(-45deg) rotateY(-55deg);
+   }
+   100% {
+      transform: rotateX(-45deg) rotateY(-35deg);
+   }
+}
+
+.info {
+   width: 90vw;
+   height: 60vh;
+   overflow-y: auto;
+}
+
+.scrt {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   text-justify: center;
+   align-items: center;
+}
+
+.inv {
+   transform: scale(0.90);
+   border-radius: 0vh;
+   border-bottom: 5px #e3e6ef solid;
+   background: #fff;
+   height: 97.5vh;
+   overflow-y: auto;
+}
+
+.script-div {
+   height: 120px;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 96px;
+   padding-top: 94px;
+}
+
+.script-div1 {
+   height: 100px;
+   display: inline-flex;
+   justify-content: center;
+   padding-top: 15px;
+   width: 48px;
+   transform: scale(0.4);
+   margin-left: 28px;
+   margin-right: 28px;
+}
+
+@media (orientation: landscape) {
+   .script-div1 {
+      margin-left: 34px;
+      margin-right: 34px;
+   }
+   .info {
+      height: 70vh;
+   }
+}
+
+
+
+.script1 .box-shadow {
+   width: 56px;
+   height: 56px;
+   box-shadow: -25px -25px #8493BD , -25.5px -25.5px #98A8C7;
+   position: relative;
+}
+
+.script2 .box-shadow {
+   width: 120px;
+   height: 120px;
+   box-shadow: -25px -25px #8493BD , -25.5px -25.5px #98A8C7;
+   position: relative;
+}
+
+
+.script2 .box-shadow:after {
+   content: "";
+   border-style: solid;
+   border-width: 25px 0px 0px 25px;
+   border-color: transparent transparent transparent #8493BD;
+   display: block;
+   position: absolute;
+   left: 95px;
+   top: -25px;
+}
+
+.script2 .box-shadow:before {
+   content: "";
+   border-style: solid;
+   border-width: 0px 25px 25px 0px;
+   border-color: transparent #8493BD transparent transparent;
+   display: block;
+   position: absolute;
+   left: -25px;
+   bottom: 0px;
+}
+
+.script1 .box-shadow:after {
+   content: "";
+   border-style: solid;
+   border-width: 25px 0px 0px 25px;
+   border-color: transparent transparent transparent #8493BD;
+   display: block;
+   position: absolute;
+   left: 31px;
+   top: -25px;
+}
+
+.script1 .box-shadow:before {
+   content: "";
+   border-style: solid;
+   border-width: 0px 25px 25px 0px;
+   border-color: transparent #8493BD transparent transparent;
+   display: block;
+   position: absolute;
+   left: -25px;
+   bottom: 0px;
+}
+
+.script2 {
+   position: relative;
+   transform-style: preserve-3d;
+   animation: script 5s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+   transform-origin: 60px 60px;
+   width: 120px;
+   transform: rotateX(-0deg) rotateY(0deg);
+}
+
+.script1 {
+   position: relative;
+   transform-style: preserve-3d;
+   animation: script 5s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+   transform-origin: 28px 28px;
+   width: 56px;
+   transform: rotateX(-90deg) rotateY(0deg);
+   padding-top: 32px;
+}
+
+.script1 {
+   image-rendering: pixelated;
+}
+
+.script2 {
+   image-rendering: pixelated;
+}
+
+.script2 .scrf ,.script2 .scrb ,.script2 .scrl ,.script2 .scrr {
+   width: 120px;
+   height: 24px;
+   position: absolute;
+   background-size: 100%;
+   image-rendering: pixelated;
+}
+
+.script1 .scrf ,.script1 .scrb ,.script1 .scrl ,.script1 .scrr {
+   width: 56px;
+   height: 24px;
+   position: absolute;
+   background-size: 100%;
+   image-rendering: pixelated;
+}
+
+.script2 .scrt ,.script2 .scrd {
+   width: 120px;
+   height: 120px;
+   position: absolute;
+   image-rendering: pixelated;
+}
+
+.script1 .scrt ,.script1 .scrd {
+   width: 56px;
+   height: 56px;
+   position: absolute;
+   image-rendering: pixelated;
+}
+
+.script2 .scrf {
+   transform: translateZ(60px);
+   -webkit-filter: hue-rotate(-2.5deg) brightness(0.85);
+   background-size: 256px;
+   background-position: 0px 120px;
+}
+
+.script2 .scrb {
+   transform: rotateY(180deg) translateZ(60px);
+   background-size: 256px;
+   background-position: 0px 120px;
+}
+
+.script2 .scrt {
+   transform: rotateY(-90deg) rotateX(90deg) translateZ(60px);
+   background-size: 256px;
+   background-position: 0px 0px;
+}
+
+.script2 .scrd {
+   transform: rotateX(-90deg) translateZ(-36px);
+   background-size: 256px;
+   background-position: 0px 136px;
+}
+
+.script2 .scrl {
+   transform: rotateY(-90deg) translateZ(60px);
+   -webkit-filter: hue-rotate(-2.5deg) brightness(0.85);
+   background-size: 256px;
+   background-position: 0px 120px;
+}
+
+.script2 .scrr {
+   transform: rotateY(90deg) translateZ(60px);
+   background-size: 256px;
+   background-position: 0px 120px;
+}
+
+.script1 .scrf {
+   transform: translateZ(28px);
+   -webkit-filter: hue-rotate(-2.5deg) brightness(0.85);
+   background-size: 128px;
+   background-position: 0px 56px;
+}
+
+.script1 .scrb {
+   transform: rotateY(180deg) translateZ(28px);
+   background-size: 128px;
+   background-position: 0px 56px;
+}
+
+.script1 .scrt {
+   transform: rotateY(-90deg) rotateX(90deg) translateZ(28px);
+   background-size: 128px;
+}
+
+.script1 .scrd {
+   transform: rotateX(-90deg) translateZ(-4px);
+   background-size: 128px;
+   background-position: -56px 0px;
+}
+
+.script1 .scrl {
+   transform: rotateY(-90deg) translateZ(28px);
+   background-size: 128px;
+   background-position: 0px 56px;
+   -webkit-filter: hue-rotate(-2.5deg) brightness(0.85);
+}
+
+.script1 .scrr {
+   transform: rotateY(90deg) translateZ(28px);
+   background-size: 128px;
+   background-position: 0px 56px;
+}
+
+
+
+
+
+.script3 .box-shadow {
+   width: 120px;
+   height: 56px;
+   box-shadow: -25px -25px #8493BD , -25.5px -25.5px #98A8C7;
+   position: relative;
+}
+
+.script4 .box-shadow {
+   width: 120px;
+   height: 184px;
+   box-shadow: -25px -25px #8493BD , -25.5px -25.5px #98A8C7;
+   position: relative;
+}
+
+
+.script4 .box-shadow:after {
+   content: "";
+   border-style: solid;
+   border-width: 25px 0px 0px 25px;
+   border-color: transparent transparent transparent #8493BD;
+   display: block;
+   position: absolute;
+   left: 95px;
+   top: -25px;
+}
+
+.script4 .box-shadow:before {
+   content: "";
+   border-style: solid;
+   border-width: 0px 25px 25px 0px;
+   border-color: transparent #8493BD transparent transparent;
+   display: block;
+   position: absolute;
+   left: -25px;
+   bottom: 0px;
+}
+
+.script3 .box-shadow:after {
+   content: "";
+   border-style: solid;
+   border-width: 25px 0px 0px 25px;
+   border-color: transparent transparent transparent #8493BD;
+   display: block;
+   position: absolute;
+   left: 95px;
+   top: -25px;
+}
+
+.script3 .box-shadow:before {
+   content: "";
+   border-style: solid;
+   border-width: 0px 25px 25px 0px;
+   border-color: transparent #8493BD transparent transparent;
+   display: block;
+   position: absolute;
+   left: -25px;
+   bottom: 0px;
+}
+
+.script4 {
+   position: relative;
+   transform-style: preserve-3d;
+   animation: script 5s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+   transform-origin: 60px 60px;
+   width: 120px;
+   transform: rotateX(-90deg) rotateY(0deg);
+}
+
+.script3 {
+   position: relative;
+   transform-style: preserve-3d;
+   animation: script 5s infinite cubic-bezier(0.455, 0.03, 0.515, 0.955);
+   transform-origin: 60px 28px;
+   width: 120px;
+   transform: rotateX(-90deg) rotateY(0deg);
+   padding-top: 32px;
+}
+
+.script3 {
+   image-rendering: pixelated;
+}
+
+.script4 {
+   image-rendering: pixelated;
+}
+
+.script4 .scrf ,.script4 .scrb {
+   width: 120px;
+   height: 24px;
+   position: absolute;
+   image-rendering: pixelated;
+}
+
+.script4 .scrl ,.script4 .scrr {
+   width: 184px;
+   height: 24px;
+   position: absolute;
+   image-rendering: pixelated;
+}
+
+.script3 .scrl ,.script3 .scrr {
+   width: 56px;
+   height: 24px;
+   position: absolute;
+   image-rendering: pixelated;
+   transform-origin: 28px;
+}
+
+.script3 .scrf ,.script3 .scrb {
+   width: 120px;
+   height: 24px;
+   position: absolute;
+   image-rendering: pixelated;
+}
+
+
+.script4 .scrt {
+   width: 184px;
+   height: 120px;
+   position: absolute;
+   image-rendering: pixelated;
+}
+
+.script4 .scrd {
+   width: 120px;
+   height: 184px;
+   position: absolute;
+   image-rendering: pixelated;
+}
+
+
+.script3 .scrd {
+   width: 120px;
+   height: 56px;
+   position: absolute;
+   image-rendering: pixelated;
+}
+
+.script3 .scrt {
+   width: 56px;
+   height: 120px;
+   position: absolute;
+   image-rendering: pixelated;
+}
+
+.script4 .scrf {
+   transform: translateZ(92px) translateY(32px);
+   -webkit-filter: hue-rotate(-2.5deg) brightness(0.85);
+   background-size: 850px;
+   background-position: 0px -200px;
+}
+
+.script4 .scrb {
+   transform: rotateY(180deg) translateZ(92px) translateY(32px);
+   background-size: 850px;
+   background-position: 0px -200px;
+}
+
+.script4 .scrt {
+   transform: rotateY(-90deg) rotateX(90deg) translateZ(28px) translateY(32px);
+   background-size: 512px;
+   background-position: 0px 0px;
+}
+
+.script4 .scrd {
+   transform: rotateX(-90deg) translateZ(-36px);
+   background-size: 850px;
+   background-position: 0px -200px;
+}
+
+.script4 .scrl {
+   transform: rotateY(-90deg) translateZ(92px) translateY(32px);
+   -webkit-filter: hue-rotate(-2.5deg) brightness(0.85);
+   background-size: 850px;
+   background-position: 0px -200px;
+}
+
+.script4 .scrr {
+   transform: rotateY(90deg) translateZ(28px) translateY(32px);
+   background-size: 850px;
+   background-position: 0px -200px;
+}
+
+.script3 .scrf {
+   transform: translateZ(28px);
+   -webkit-filter: hue-rotate(-2.5deg) brightness(0.85);
+   background-size: 256px;
+   background-position: -56px 0px;
+}
+
+.script3 .scrb {
+   transform: rotateY(180deg) translateZ(28px);
+   background-size: 256px;
+   background-position: -56px 0px;
+}
+
+.script3 .scrt {
+   transform: rotateY(-90deg) rotateX(90deg) translateZ(60px) translateY(-32px);
+   background-size: 256px;
+}
+
+.script3 .scrd {
+   transform: rotateX(-90deg) translateZ(-4px);
+   background-size: 4096px;
+   background-position: 640px 0px;
+}
+
+.script3 .scrl {
+   transform: rotateY(-90deg) translateZ(28px);
+   background-size: 256px;
+   background-position: -56px 0px;
+   -webkit-filter: hue-rotate(-2.5deg) brightness(0.85);
+}
+
+.script3 .scrr {
+   transform: rotateY(90deg) translateZ(92px);
+   background-size: 256px;
+   background-position: -56px 0px;
+}

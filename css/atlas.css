@@ -1,0 +1,312 @@
+/* ---------------------------------- */
+*, *:before, *:after {
+  position: relative;
+  box-sizing: border-box;
+  /*transition: all 0.3s cubic-bezier(0.5, 0, 0.5, 1);*/
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+}
+
+red {
+   color: #fe4a67;
+}
+
+.icon-1,.icon-2,.icon-3 {
+   width: 8px;
+   height: 8px;
+   transform: scale(3) translateY(4px);
+   margin-left: 5vh;
+   margin-right: 5vh;
+   margin-bottom: 25px;
+   background-image: url(../img/alpha.png);
+   image-rendering: pixelated;
+}
+
+.icon-1 {
+   background-position: -24px 0px; 
+}
+
+.icon-2 {
+   background-position: -8px 0px;
+}
+
+.icon-3 {
+   background-position: -8px -8px;
+}
+
+#nav-1:checked ~ * .icon-1 {
+   background-position: -16px 0px;
+}
+
+#nav-2:checked ~ * .icon-2 {
+   background-position: 0px 0px;
+}
+
+#nav-3:checked~* .icon-3 {
+   background-position: 0px -8px;
+}
+
+.refl {
+   -webkit-box-reflect: below 0px linear-gradient(to bottom, rgba(100,0,0,0.1) , rgba(0,0,0,1));
+   transform-style: preserve-3d;
+}
+
+/* ---------------------------------- */
+#app {
+  height: 100vh;
+  width: 100vw;
+  background-color: #adbdd1;
+  overflow: hidden;
+}
+
+span {
+   transition: all 0.0s linear;
+}
+
+article {
+   transition: all 0.3s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.ui-nav {
+  overflow: hidden;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  height: 17vh;
+  display: flex;
+  align-items: stretch;
+  text-align: center;
+  z-index: 3;
+}
+
+.ui-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.0s linear;
+}
+
+.ui-label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  top: 1%;
+  height: 15vh;
+  background: #fff;
+  transition: all 0.0s linear;
+  color: #adbdd1;
+  font-size: 10px;
+  border: 2px solid #e3e6ef;
+  box-shadow: 0px 10px #e3e6ef;
+}
+
+/* ---------------------------------- */
+.ui-pages {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.ui-page {
+  width: 100%;
+  margin-right: -100%;
+  color: #FFF;
+}
+
+[data-page="1"] {
+  background-color: #adbdd1;
+}
+
+[data-page="2"] {
+  background-color: #adbdd1;
+}
+
+[data-page="3"] {
+  background-color: #adbdd1;
+}
+
+/* ---------------------------------- */
+input[name=choice] {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
+#nav-1:checked ~ * label[for=nav-1],
+#nav-2:checked ~ * label[for=nav-2],
+#nav-3:checked ~ * label[for=nav-3] {
+  background: #0088fe;
+  border: 2px solid #0065d9;
+  box-shadow: 0px 10px #0065d9;
+  color: #fff;
+}
+
+label[for=nav-1]:active,
+label[for=nav-2]:active,
+label[for=nav-3]:active {
+   transform: translateY(12%);
+}
+
+[data-page] {
+  transform: translateX(-100%);
+}
+
+#nav-1:checked ~ * [data-page="1"],
+#nav-2:checked ~ * [data-page="2"],
+#nav-3:checked ~ * [data-page="3"] {
+  transform: translateX(0%);
+}
+#nav-1:checked ~ * [data-page="1"] ~ [data-page],
+#nav-2:checked ~ * [data-page="2"] ~ [data-page],
+#nav-3:checked ~ * [data-page="3"] ~ [data-page] {
+  transform: translateX(100%);
+}
+
+/* ---------------------------------- */
+.ui-bg {
+  transform: translateX(calc(var(--x) * 33.3333%));
+}
+
+#nav-1:checked ~ #app {
+  --x: 0;
+}
+
+#nav-2:checked ~ #app {
+  --x: 1;
+}
+
+#nav-3:checked ~ #app {
+  --x: 2;
+}
+
+/* ---------------------------------- */
+.init {
+   position: relative;
+}
+
+@media (orientation: landscape) {
+   html {
+      width: 190vh;
+      height: 160vh;
+      zoom: 60%;
+   }
+   .init {
+      height: 160vh;
+   }
+   #app {
+      height: 160vh;
+   }
+}
+
+.mailbox {
+   opacity: 0;
+   transition: all 0.2s ease-in-out;
+   transform: scale(0);
+   position: absolute;
+   top: 5vh;
+   width: 70vw;
+   padding: 15px;
+   box-shadow: 0px 5px #0065d9;
+   border: 2px #0065d9 solid;
+   background: #0088fe;
+   color: #fff;
+}
+
+.inbox-mail {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  width: 8px;
+  height: 8px;
+}
+
+.inbox-mail input {
+  position: absolute;
+  top: 28px;
+  left: 26px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+  width: 8px;
+  transform: scale(3);
+  background-image: url(../img/atlas.png);
+  image-rendering: pixelated;
+  background-position: -40px -16px;
+}
+
+.inbox-mail input:checked ~ .checkmark {
+   background-position: -32px 0px;
+}
+
+.inbox-mail input:checked ~ .mailbox {
+   opacity: 1;
+   transform: scale(1);
+}
+
+.exit {
+   width: 8px;
+   height: 8px;
+   transform: scale(3) rotateZ(45deg) translateY(-4px) translateX(4px);
+}
+.button-exit {
+   display: flex;
+   position: absolute;
+   top: 14px;
+   left: 14px;
+   align-items: center;
+   color: #fe4a67;
+   padding: 10px;
+   border: 2px solid #be304a;
+   width: 60px;
+   height: 40px;
+   background: #fe4a67;
+   box-shadow: 0px 7px #be304a;
+   transition: all 0.0s ;
+}
+.button-exit:hover {
+   box-shadow: 0px 0px #be304a;
+   transform: translateY(7px);
+   opacity: 1;
+}
+
+      body {
+         animation: load 0.5s normal ease-in-out;
+      }
+
+      html {
+         background: #000;
+      }
+
+      @keyframes load {
+         from {
+            opacity: 0;
+         }
+
+         to {
+            opacity: 100;
+         }
+      }
