@@ -199,20 +199,6 @@ label[for=nav-3]:active {
    position: relative;
 }
 
-@media (orientation: landscape) {
-   html {
-      width: 190vh;
-      height: 160vh;
-      zoom: 60%;
-   }
-   .init {
-      height: 160vh;
-   }
-   #app {
-      height: 160vh;
-   }
-}
-
 .mailbox {
    opacity: 0;
    transition: all 0.2s ease-in-out;
