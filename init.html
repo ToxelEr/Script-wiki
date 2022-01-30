@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Script-Wiki</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="css/atlas.css">
+   <link rel="stylesheet" href="css/martin-magni.css">
+   <link rel="stylesheet" href="css/fancade.css">
+   <link rel="stylesheet" href="css/script.css">
+</head>
+
+<body>
+   <style>
+      .script1 .scrf,
+      .script1 .scrb,
+      .script1 .scrl,
+      .script1 .scrr,
+      .script1 .scrt,
+      .script1 .scrd {
+         background-image: url(scripts/1/c.png);
+         image-rendering: pixelated;
+      }
+
+      .script2 .scrf,
+      .script2 .scrb,
+      .script2 .scrl,
+      .script2 .scrr,
+      .script2 .scrt,
+      .script2 .scrd {
+         background-image: url(scripts/2/c.png);
+         image-rendering: pixelated;
+      }
+
+      .script3 .scrf,
+      .script3 .scrb,
+      .script3 .scrl,
+      .script3 .scrr,
+      .script3 .scrt,
+      .script3 .scrd {
+         background-image: url(scripts/3/c.png);
+         image-rendering: pixelated;
+      }
+
+      .script4 .scrf,
+      .script4 .scrb,
+      .script4 .scrl,
+      .script4 .scrr,
+      .script4 .scrt,
+      .script4 .scrd {
+         background-image: url(scripts/4/c.png);
+         image-rendering: pixelated;
+      }
+   </style>
+   <style>
+      body {
+         animation: load 1s normal ease-in-out;
+      }
+
+      html {
+         background: #000;
+      }
+
+      @keyframes load {
+         from {
+            opacity: 0;
+         }
+
+         to {
+            opacity: 100;
+         }
+      }
+   </style>
+<div class="init">
+   <input type="radio" name="choice" id="nav-1" checked>
+   <input type="radio" name="choice" id="nav-2">
+   <input type="radio" name="choice" id="nav-3">
+   <div id="app">
+      <nav class="ui-nav">
+         <div class="ui-bg">
+         </div>
+         <label onclick="button()" for="nav-1" class="ui-label">
+            <span class="ui-icon">
+               <div class="icon-1"></div>
+               Home
+            </span>
+         </label>
+         <label onclick="button()" for="nav-2" class="ui-label">
+            <span class="ui-icon">
+               <div class="icon-2"></div>
+               Wiki
+            </span>
+         </label>
+         <label onclick="button()" for="nav-3" class="ui-label">
+            <span class="ui-icon">
+               <div class="icon-3"></div>
+               About
+            </span>
+         </label>
+      </nav>
+      <div class="ui-pages">
+         <article class="ui-page" data-page="1">
+            <div style="margin-top: 10vh" class="script-div">
+               <div class="script2 camera">
+                  <div class="scrf"></div>
+                  <div class="scrb"></div>
+                  <div class="scrt"><img src="img/floppy-disk.png" class="script-icon">
+                  </div>
+                  <div class="scrd">
+                     <div class="box-shadow"></div>
+                  </div>
+                  <div class="scrl"></div>
+                  <div class="scrr"></div>
+               </div>
+            </div>
+            <h1>Fancade</h1>
+            <div class="center" style="width: 90vw;">
+               <div id="tip">Unlock a world of games! Or make your own?</div>
+            </div>
+         </article>
+         <article class="ui-page" data-page="2">
+            <h1 style="margin-bottom: 2vh;">wiki</h1>
+            <div class="info">
+               <div class="div-line-small"></div>
+               <h3 class="left"><a href="wiki/game.html">Game</a></h3>
+               <div class="div-line-small"></div>
+               <h3 class="left"><a href="wiki/objects.html">Objects</a></h3>
+               <div class="div-line-small"></div>
+               <h3 class="left"><a href="wiki/sound.html">Sound</a></h3>
+               <div class="div-line-small"></div>
+               <h3 class="left"><a href="wiki/control.html">Control</a></h3>
+               <div class="div-line-small"></div>
+               <h3 class="left"><a href="wiki/values.html">Values</a></h3>
+               <div class="div-line-small"></div>
+            </div>
+         </article>
+         <article class="ui-page" data-page="3">
+            <div>
+               <h1>Credits <div style="transform: scale(5) translateY(-2px);" class="icon8 red"></div> </h1>
+               <div>Martin magni</div>
+               <div>Toxel</div>
+               <div>ViChyavin</div>
+               <div class="div-line-small"></div>
+               <h2>Special Thanks <div src="" style="transform: scale(3) translateY(-3px);" class="icon8 like-green"></div> </h2>
+               <div>Sounak9434</div>
+               <div>Bricked</div>
+               <div>James1236</div>
+            </div>
+         </article>
+      </div>
+   </div>
+ </div>
+ 
+ <label class="inbox-mail">
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    <div id="mail" class="mailbox"> </div>
+ </label>
+
+   <script src="js/rand.js"></script>
+   <script src="js/script.js"></script>
+   <script>randomize()</script>
+   
+</body>
+
+</html>
